@@ -12,13 +12,13 @@ public class Employee{
     private double unpaidHours;
     private double paySalary;
     private double pay; 
-    private double x ;
-    public Employee(String fullname, int yearOfBirth, double hourlyWage){
+  
+    public Employee(String fullname, int yearOfBirth, double hourlyWage, int unpaidtime){
         this.fullname = fullname;
         this.yearOfBirth = yearOfBirth;
         this.hourlyWage = hourlyWage;
         onLeave = false;
-        unpaidHours = 0.0;
+        unpaidHours = unpaidtime;
     }
     
     /**
@@ -27,18 +27,18 @@ public class Employee{
     private int calculateAge(int currentYear){
         return (currentYear - yearOfBirth);
     }
-
+    
     /**
      * Returns true is an employee is above 16 years old
      */
     public boolean canDrive(){
         int age = calculateAge(2025);
         if (age >= 16) {
-            System.out.print (fullname + "can drive");
+            System.out.println (fullname + "can drive");
             return true;
         }
         else{
-            System.out.print("You have to wait" +(16-age)+ "more years"); 
+            System.out.println ("You have to wait" + (16-age) + "more years"); 
             return false;
         
         }
@@ -59,7 +59,8 @@ public class Employee{
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){ 
-    System.out.print (fullname + "has recieved a wire transfer of"+ pay+ "CAD");
+    calculatePay();
+    System.out.println (fullname + " has recieved a wire transfer of "+ pay+ " CAD");
     
     unpaidHours =0;
 }
@@ -70,6 +71,11 @@ public class Employee{
     public String getfullname() {
         return fullname;
     }
+    
+public void setunpaidHours(int unpaidtime){
+    unpaidHours = unpaidtime;
+}
+
 }
 
 
