@@ -31,6 +31,12 @@ public class Employee{
      */
     public boolean canDrive(){
         int age = calculateAge(2025);
+        if (age >= 16) {
+            SystemOutPrint (fullname + "can drive");
+        else
+            systemOutPrint("You have to wait +(16-age)+ "more years"); 
+        
+        }
         // to be completed
     }
 
@@ -38,13 +44,29 @@ public class Employee{
      * Returns the net pay for the outstanding unpaid hours
      */
     private double calculatePay(){
-        // to be completed
+        double calculatepay = pay;
+        doublae beforetax = x ;
+        unpaidHours*HourlyWage = x;
+        x*0.7 = pay;
+        return pay;
+    }
     }
 
     /*
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
-        // to be completed
+    SystemOutPrint (fullname + "has recieved a wire transfer of"+ calculatePay+ "CAD");
+    
+    UnpaidHours ==0;
+}
     }
+    public setfullname;
+    return fullname 
+    
+    public getname() {
+        return fullname 
+    }
+}
+
 }
