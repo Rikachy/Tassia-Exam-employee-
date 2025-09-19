@@ -33,8 +33,9 @@ public class Employee{
         int age = calculateAge(2025);
         if (age >= 16) {
             SystemOutPrint (fullname + "can drive");
-        else
-            systemOutPrint("You have to wait +(16-age)+ "more years"); 
+        }
+        else{
+            systemOutPrint("You have to wait" +(16-age)+ "more years"); 
         
         }
         // to be completed
@@ -56,17 +57,17 @@ public class Employee{
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){
+    paysalary = 
     SystemOutPrint (fullname + "has recieved a wire transfer of"+ calculatePay+ "CAD");
     
-    UnpaidHours ==0;
+    UnpaidHours =0;
 }
-    }
-    public setfullname;
-    return fullname 
     
-    public getname() {
-        return fullname 
+    public void setfullname() {
+    fullname = Maryames;
+}
+    public void getname() {
+        return fullname;
     }
-}
 
-}
+
