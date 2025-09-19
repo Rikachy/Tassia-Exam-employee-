@@ -34,23 +34,23 @@ public class Employee{
     public boolean canDrive(){
         int age = calculateAge(2025);
         if (age >= 16) {
-            System.out (fullname + "can drive");
+            System.out.print (fullname + "can drive");
+            return true;
         }
         else{
-            System.out("You have to wait" +(16-age)+ "more years"); 
+            System.out.print("You have to wait" +(16-age)+ "more years"); 
+            return false;
         
         }
-        // to be completed
+    
     }
 
     /*
      * Returns the net pay for the outstanding unpaid hours
      */
     private double calculatePay(){
-        double calculatepay = pay;
-        double tax = 0.7 ;
-        unpaidHours * hourlyWage = x;
-        x * tax = pay;
+        double notax = 0.7;
+        pay = (hourlyWage*unpaidHours*notax);
         return pay;
     }
     
@@ -59,13 +59,13 @@ public class Employee{
      * Output the payment record and resets unpaid hours
      */
     public void paySalary(){ 
-    System.out (fullname + "has recieved a wire transfer of"+ pay+ "CAD");
+    System.out.print (fullname + "has recieved a wire transfer of"+ pay+ "CAD");
     
     unpaidHours =0;
 }
     
-    public void setfullname() {
-    name = fullname ;
+    public void setfullname(String name ) {
+    fullname = name ;
 }
     public String getfullname() {
         return fullname;
